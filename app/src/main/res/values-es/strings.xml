@@ -9,5 +9,6 @@
     <string name="copy_deaths">Muertes</string>
     <string name="copy_active_cases">Casos Activos</string>
     <string name="copy_total_recovered">Total Recuperados</string>
+    <string name="copy_total_deaths">Total Muertes</string>
 
 </resources>

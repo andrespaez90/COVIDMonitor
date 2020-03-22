@@ -8,6 +8,7 @@ import android.widget.FrameLayout
 import com.paez.covid.databinding.ItemCountryInformationBinding
 import com.paez.covid.network.models.CountryCases
 import com.paez.covid.ui.models.list.GenericItemView
+import kotlinx.android.synthetic.main.item_country_information.view.*
 
 class CountryInformationItem(context: Context) : GenericItemView<CountryCases> {
 
@@ -32,6 +33,6 @@ class CountryInformationItem(context: Context) : GenericItemView<CountryCases> {
     override fun getView(): View = binding.root
 
     fun setOnClickListener(action: (CountryCases) -> Unit) {
-        binding.root.setOnClickListener { action(data) }
+        binding.layoutContainer.setOnClickListener { action(data) }
     }
 }

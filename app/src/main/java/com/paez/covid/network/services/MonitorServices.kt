@@ -1,9 +1,8 @@
-package com.barnes.infopumps.network.services
-
+package com.paez.covid.network.services
 
 import com.paez.covid.network.models.CasesByCountryResponse
 import com.paez.covid.network.models.CountriesAffectedResponse
-import io.reactivex.Completable
+import com.paez.covid.network.models.CountryHistoryResponse
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -17,6 +16,6 @@ interface MonitorServices {
     fun getCasesByCountry(): Single<CasesByCountryResponse>
 
     @GET("cases_by_particular_country.php")
-    fun getHistoryByCountry(@Query("country") countryName: String): Completable
+    fun getHistoryByCountry(@Query("country") countryName: String): Single<CountryHistoryResponse>
 
 }

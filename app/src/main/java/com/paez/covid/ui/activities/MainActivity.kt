@@ -52,6 +52,7 @@ class MainActivity : BaseActivity() {
         viewModel = provideViewModel()
         subscribeViewModel(viewModel, binding.root)
         viewModel.onDataChange().observe(this, Observer { updateInformation(it) })
+        itemsFactory.setListener(viewModel)
     }
 
     private fun updateInformation(information: CasesByCountryResponse) {

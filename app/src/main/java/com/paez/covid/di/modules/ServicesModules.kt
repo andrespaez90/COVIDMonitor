@@ -1,10 +1,9 @@
 package com.barnes.infopumps.di.modules
 
-import com.barnes.infopumps.network.services.*
+import com.paez.covid.network.services.MonitorServices
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit
-import javax.inject.Named
 import javax.inject.Singleton
 
 @Module
