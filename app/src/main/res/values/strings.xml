@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">COVID Monitor</string>
+
+    <string name="copy_updating">Actualizando</string>
+    <string name="copy_monitor">Monitor</string>
+
+    <string name="copy_total_cases">Total Cases</string>
+    <string name="copy_new_cases">New Cases</string>
+    <string name="copy_deaths">Deaths</string>
+    <string name="copy_active_cases">Active Cases</string>
+    <string name="copy_total_recovered">Total Recovered</string>
+
+
+</resources>

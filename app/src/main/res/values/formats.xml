@@ -1,0 +1,4 @@
+<resources>
+    <string name="format_two_lines" translatable="false">%1$s\n%2$s</string>
+    <string name="format_version">version %1$s</string>
+</resources>
