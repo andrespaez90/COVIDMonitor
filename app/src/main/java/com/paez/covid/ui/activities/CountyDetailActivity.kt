@@ -13,6 +13,7 @@ import com.github.mikephil.charting.utils.ColorTemplate
 import com.github.mikephil.charting.utils.MPPointF
 import com.paez.covid.R
 import com.paez.covid.databinding.ActivityCountyDetailBinding
+import com.paez.covid.extensions.tryOrDefault
 import com.paez.covid.network.models.CountryHistoryInformation
 import com.paez.covid.network.models.CountryHistoryResponse
 import com.paez.covid.viewModels.CountryDetailViewModel
@@ -100,10 +101,25 @@ class CountyDetailActivity : BaseActivity() {
     private fun updatePieChart(information: CountryHistoryInformation) {
         val entries = ArrayList<PieEntry>()
 
-        entries.add(PieEntry(information.activeCases.toFloat(), getString(R.string.copy_active_cases)))
-        entries.add(PieEntry(information.newCases.toFloat(), getString(R.string.copy_new_cases)))
-        entries.add(PieEntry(information.totalRecovered.toFloat(), getString(R.string.copy_total_recovered)))
-        entries.add(PieEntry(information.totalDeaths.toFloat(), getString(R.string.copy_deaths)))
+        entries.add(
+            PieEntry(
+                tryOrDefault(0f) { information.activeCases.toFloat() },
+                getString(R.string.copy_active_cases)
+            )
+        )
+        entries.add(
+            PieEntry(
+                tryOrDefault(0f) { information.newCases.toFloat() },
+                getString(R.string.copy_new_cases)
+            )
+        )
+        entries.add(
+            PieEntry(
+                tryOrDefault(0f) { information.totalRecovered.toFloat() },
+                getString(R.string.copy_total_recovered)
+            )
+        )
+        entries.add(PieEntry(tryOrDefault(0f) { information.totalDeaths.toFloat() }, getString(R.string.copy_deaths)))
 
         val dataSet = PieDataSet(entries, "")
         dataSet.setDrawIcons(false)
@@ -146,9 +162,9 @@ class CountyDetailActivity : BaseActivity() {
         val totalDeaths = ArrayList<BarEntry>()
         val totalRecovered = ArrayList<BarEntry>()
         history.forEachIndexed { index, info ->
-            totalCases.add(BarEntry(index.toFloat(), info.totalCases.toFloat()))
-            totalDeaths.add(BarEntry(index.toFloat(), info.totalDeaths.toFloat()))
-            totalRecovered.add(BarEntry(index.toFloat(), info.totalRecovered.toFloat()))
+            totalCases.add(BarEntry(index.toFloat(), tryOrDefault(0f) { info.totalCases.toFloat() }))
+            totalDeaths.add(BarEntry(index.toFloat(), tryOrDefault(0f) { info.totalDeaths.toFloat() }))
+            totalRecovered.add(BarEntry(index.toFloat(), tryOrDefault(0f) { info.totalRecovered.toFloat() }))
         }
 
         val setTotalCases = BarDataSet(totalCases, getString(R.string.copy_total_cases))
