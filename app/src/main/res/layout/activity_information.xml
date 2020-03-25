@@ -19,7 +19,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
-        <com.paez.monitor.ui.views.ScaledImageView
+        <com.health.monitor.ui.views.ScaledImageView
             android:layout_width="match_parent"
             android:layout_height="@dimen/spacing_empty"
             android:src="@mipmap/img_prevention"
