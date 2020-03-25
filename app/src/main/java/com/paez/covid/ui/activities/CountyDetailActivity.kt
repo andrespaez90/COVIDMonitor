@@ -38,6 +38,7 @@ class CountyDetailActivity : BaseActivity() {
      */
 
     private fun initViews() {
+        setupActionBar(binding.toolbar)
         initChartPie()
         initChartBar()
     }
@@ -102,22 +103,22 @@ class CountyDetailActivity : BaseActivity() {
         val entries = ArrayList<PieEntry>()
 
         entries.add(
-            PieEntry(
-                tryOrDefault(0f) { information.activeCases.toFloat() },
-                getString(R.string.copy_active_cases)
-            )
+                PieEntry(
+                        tryOrDefault(0f) { information.activeCases.toFloat() },
+                        getString(R.string.copy_active_cases)
+                )
         )
         entries.add(
-            PieEntry(
-                tryOrDefault(0f) { information.newCases.toFloat() },
-                getString(R.string.copy_new_cases)
-            )
+                PieEntry(
+                        tryOrDefault(0f) { information.newCases.toFloat() },
+                        getString(R.string.copy_new_cases)
+                )
         )
         entries.add(
-            PieEntry(
-                tryOrDefault(0f) { information.totalRecovered.toFloat() },
-                getString(R.string.copy_total_recovered)
-            )
+                PieEntry(
+                        tryOrDefault(0f) { information.totalRecovered.toFloat() },
+                        getString(R.string.copy_total_recovered)
+                )
         )
         entries.add(PieEntry(tryOrDefault(0f) { information.totalDeaths.toFloat() }, getString(R.string.copy_deaths)))
 

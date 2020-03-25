@@ -1,5 +1,6 @@
 package com.paez.covid.ui.activities
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
@@ -42,6 +43,7 @@ class MainActivity : BaseActivity() {
             addItemDecoration(DividerItemDecoration(resources.getDimensionPixelSize(R.dimen.spacing_small)))
         }
         binding.layoutRefresh.setOnRefreshListener { viewModel.updateInformation() }
+        binding.textViewTitle.setOnClickListener { startActivity(Intent(this, InformationActivity::class.java)) }
     }
 
     /**

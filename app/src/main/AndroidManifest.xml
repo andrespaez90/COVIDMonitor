@@ -13,6 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".ui.activities.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,8 +21,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activities.CountyDetailActivity"></activity>
+
+        <activity android:name=".ui.activities.CountyDetailActivity" />
+
         <activity android:name=".ui.activities.MainActivity" />
+
+        <activity android:name=".ui.activities.InformationActivity" />
     </application>
 
 </manifest>

@@ -22,11 +22,23 @@
             android:orientation="vertical"
             tools:context=".ui.activities.CountyDetailActivity">
 
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:background="@android:color/white"
+                android:theme="@style/AppTheme.Toolbar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/layout_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/spacing_medium"
+                android:layout_marginTop="@dimen/spacing_standard"
                 android:background="@android:color/white"
                 app:cardCornerRadius="@dimen/spacing_standard"
                 tools:targetApi="lollipop">
