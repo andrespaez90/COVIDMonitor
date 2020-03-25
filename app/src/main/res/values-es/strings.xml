@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">COVID Monitor</string>
+    <string name="app_name">Global Health Monitor</string>
 
     <string name="copy_updating">Updating</string>
     <string name="copy_monitor">Monitor</string>
@@ -10,5 +10,7 @@
     <string name="copy_active_cases">Casos Activos</string>
     <string name="copy_total_recovered">Total Recuperados</string>
     <string name="copy_total_deaths">Total Muertes</string>
+    <string name="copy_title_start_home">#STAYHOME</string>
+    <string name="copy_message_wash_hands">Recuerda lavarte las manos</string>
 
 </resources>

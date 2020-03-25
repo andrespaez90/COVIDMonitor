@@ -86,6 +86,14 @@
         <item name="android:textColor">@color/colorPrimary</item>
     </style>
 
+    <style name="TextHuge.Red" parent="TextHuge">
+        <item name="android:textColor">@android:color/holo_red_light</item>
+    </style>
+
+    <style name="TextHuge.Red.Bold" parent="TextHuge.Red">
+        <item name="android:textStyle">bold</item>
+    </style>
+
     <style name="TextNormal.White.Bold" parent="TextNormal.White">
         <item name="android:textStyle">bold</item>
     </style>

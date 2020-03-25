@@ -27,11 +27,11 @@
 
             <TextView
                 android:id="@+id/textView_title"
-                style="@style/TextHuge.Black.Bold"
+                style="@style/TextBig.Black.Bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/spacing_standard"
-                android:text="@string/copy_monitor" />
+                android:text="@string/app_name" />
 
         </LinearLayout>
 
