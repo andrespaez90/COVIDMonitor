@@ -27,7 +27,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@mipmap/ic_launcher" />
 
-            <com.paez.covid.ui.views.VectorCompatTextView
+            <com.paez.monitor.ui.views.VectorCompatTextView
                 android:id="@+id/textView_title"
                 style="@style/TextBig.Black.Bold"
                 android:layout_width="match_parent"

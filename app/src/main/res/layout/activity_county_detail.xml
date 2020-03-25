@@ -7,7 +7,7 @@
 
         <variable
             name="model"
-            type="com.paez.covid.network.models.CountryHistoryInformation" />
+            type="com.paez.monitor.network.models.CountryHistoryInformation" />
 
     </data>
 
@@ -49,7 +49,7 @@
                     android:orientation="vertical"
                     android:padding="@dimen/spacing_large">
 
-                    <com.paez.covid.ui.views.VectorCompatTextView
+                    <com.paez.monitor.ui.views.VectorCompatTextView
                         android:id="@+id/textView_country_name"
                         style="@style/TextBig.Black.Bold"
                         android:layout_width="match_parent"

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.paez.covid">
+    package="com.paez.monitor">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-        android:name=".SelfApplication"
+        android:name="com.paez.monitor.SelfApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".ui.activities.SplashActivity">
+        <activity android:name="com.paez.monitor.ui.activities.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,11 +22,11 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.activities.CountyDetailActivity" />
+        <activity android:name="com.paez.monitor.ui.activities.CountyDetailActivity" />
 
-        <activity android:name=".ui.activities.MainActivity" />
+        <activity android:name="com.paez.monitor.ui.activities.MainActivity" />
 
-        <activity android:name=".ui.activities.InformationActivity" />
+        <activity android:name="com.paez.monitor.ui.activities.InformationActivity" />
     </application>
 
 </manifest>
